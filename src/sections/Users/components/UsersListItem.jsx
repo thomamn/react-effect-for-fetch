@@ -5,15 +5,15 @@
   export default function UsersListItem({
     // Feel free to change this props names to what suits you best
     // Rememeber here we're destructuring answerItem, which is the prop name that we've passed
-    usersListItem: { name, color, email, picture }
+    usersListItem: { firstName, email, favouriteColour, profileImage}
   }) {
     return (
-        <li style={color}>
+        <li style={favouriteColour}>
             <img
-                src={picture}
-                alt={name}
+                src={profileImage}
+                alt={firstName}
             />
-            <h3>{name}</h3>
+            <h3>{firstName}</h3>
             <p>{email}</p>
       </li>
     );
