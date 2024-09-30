@@ -5,16 +5,18 @@
   export default function UsersListItem({
     // Feel free to change this props names to what suits you best
     // Rememeber here we're destructuring answerItem, which is the prop name that we've passed
-    usersListItem: { firstName, email, favouriteColour, profileImage}
+    usersListItem: { firstName, lastName, email, favouriteColour, profileImage}
   }) {
+    console.log(profileImage)
     return (
-        <li style={favouriteColour}>
-            <img
-                src={profileImage}
-                alt={firstName}
-            />
-            <h3>{firstName}</h3>
-            <p>{email}</p>
+      <li style={{ background: favouriteColour }}>
+          <img
+              src={profileImage}
+              
+              alt={firstName+' '+lastName}
+          />
+          <h3>{firstName+' '+lastName}</h3>
+          <p>{email}</p>
       </li>
     );
 }

@@ -1,8 +1,8 @@
-export default function PublicationHistoryList({publication}){
+export default function PublicationHistoryList({publicationHistory}){
     return(
 
         <ul>
-            {publication.map((entry, index) => (
+            {publicationHistory.map((entry, index) => (
                 <li key={index}>{entry}</li>
             ))}
         </ul>

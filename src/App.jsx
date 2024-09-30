@@ -5,24 +5,25 @@ import './App.css'
 import { useEffect, useState } from 'react'
 
 function App() {
-  const [art, setArt]=useState(null)
-  //const[userData, setUserData]=useState(null)
+  const[art, setArt]=useState([])
+  const[userData, setUserData]=useState([])
 
-  const [userData, setUserData] = useState({
-    firstName: "",
-    email:"",
-    favouriteColour: "",
-    profileImage: "",
-  }); 
+
   
   useEffect(() => {
     fetch('https://boolean-uk-api-server.fly.dev/thomamn/contact')
     .then(res => res.json())
     .then(userData => setUserData(userData))
   }, []
-
   )
   
+  useEffect(() => {
+    fetch('https://boolean-uk-api-server.fly.dev/art')
+    .then(res => res.json())
+    .then(art => setArt(art))
+  }, []
+  )
+
 
   return (
     <div className="main-layout">
