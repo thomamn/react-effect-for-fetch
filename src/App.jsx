@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="main-layout">
-      <ArtsSection />
+      <ArtsSection artList={art}/>
       <UsersSection userData={userData}/>
       <AdviceSection />
     </div>

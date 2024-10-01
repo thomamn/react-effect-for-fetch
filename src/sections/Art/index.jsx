@@ -1,7 +1,6 @@
 import ArtList from "./components/ArtList"
 
-function ArtsSection() {
-  const artList=null
+function ArtsSection({artList}) {
   return (
     <section>
       <h2>Arts Section</h2>
